@@ -1,5 +1,5 @@
 ---
-import {getCollection } from 'astro:content';
+import {type CollectionEntry, getCollection } from 'astro:content';
 import TaggedEssays from "../../layouts/TaggedEssays.astro"
 import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
@@ -13,6 +13,8 @@ export async function getStaticPaths() {
 		{params:{tag:"Political Science"}, props:{essays:taggedEssays}}
 	]
 }
+
+type post = CollectionEntry<"essays">
 const {tag} = Astro.params
 const {essays} = Astro.props;
 ---
@@ -101,7 +103,7 @@ const {essays} = Astro.props;
 			<section>
 				<ul>
 					{
-						essays.map((post) => (
+						essays.map((post:post) => (
 							<li>
 								<a href={`/essays/${post.slug}/`}>
 									<img width={720} height={360} src={post.data.heroImage} alt="" />
