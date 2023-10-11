@@ -1,6 +1,6 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
+title: 'On Civilisation'
+description: 'How we made this awesome place'
 pubDate: 'Jul 08 2022'
 heroImage: '/blog-placeholder-3.jpg'
 ---

@@ -3,8 +3,14 @@ import mdx from '@astrojs/mdx';
 
 import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://blog.alexafazio.dev',
 	integrations: [mdx(), sitemap()],
+	markdown: {
+		remarkPlugins: [remarkMath],
+		rehypePlugins: [rehypeKatex]
+	}
 });

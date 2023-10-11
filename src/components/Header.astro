@@ -5,15 +5,17 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2 class="bigtitle"><a href="/">{SITE_TITLE}</a></h2>
+		<h2 class="smalltitle"><a href="/">TIPP</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/contact">Contact</HeaderLink>
+			<HeaderLink href="/essays">Essays</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
-				<span class="sr-only">Follow Astro on Mastodon</span>
+				<span class="sr-only">Follow Not One on Mastodon</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
 						fill="currentColor"
@@ -22,7 +24,7 @@ import { SITE_TITLE } from '../consts';
 				>
 			</a>
 			<a href="https://twitter.com/astrodotbuild" target="_blank">
-				<span class="sr-only">Follow Astro on Twitter</span>
+				<span class="sr-only">Follow Not One on Twitter</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
 						fill="currentColor"
@@ -31,7 +33,7 @@ import { SITE_TITLE } from '../consts';
 				>
 			</a>
 			<a href="https://github.com/withastro/astro" target="_blank">
-				<span class="sr-only">Go to Astro's GitHub repo</span>
+				<span class="sr-only">Go to Not One's GitHub repo</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
 						fill="currentColor"
@@ -73,6 +75,11 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+
+	.smalltitle {
+		display: none;
+	}
+
 	.social-links,
 	.social-links a {
 		display: flex;
@@ -81,5 +88,15 @@ import { SITE_TITLE } from '../consts';
 		.social-links {
 			display: none;
 		}
+		
 	}
+	@media (max-width:1115px) {
+		.bigtitle {
+			display:none;
+		}
+		.smalltitle {
+			display:block
+		}
+	}
+	
 </style>
