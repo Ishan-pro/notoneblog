@@ -3,7 +3,6 @@ title: 'Scenius: A creative model of creativity'
 description: 'A model of creativity created by Brian Eno'
 pubDate: 'Oct 11 2023'
 heroImage: '/Mozartandpeople.jpg'
-tag: 'Political Science'
 ---
 
 Scenius as opposed to genius is a theoretical model proposed by the musician [Brian Eno](https://en.wikipedia.org/wiki/Brian_Eno). It is opposed to the term "genius" both of which try to show the emergence of a work of art.
